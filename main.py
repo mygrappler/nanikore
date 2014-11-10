@@ -12,7 +12,7 @@ Vb = [10.01, 10.05, 10.10, 10.30, 10.50, 11.00, 12.00, 15.00, 20.00]
 
 for var in range(0, len(Va)):
     if (var == 0):
-        print("pH: 0")
+        print("pH: 1")
 
     vH = (V0 - Va[var]) * 0.0001
     vAll = Va[var] + V0
