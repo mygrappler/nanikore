@@ -16,7 +16,7 @@ for var in range(0, len(Va)):
 
     vH = V0 - Va[var]
     vAll = Va[var] + V0
-    V1 = round_sig(((vH*0.001)/vAll) * 100, 4)
+    V1 = round_sig(((vH*0.0001)/vAll) * 1000, 4)
     ansA = round_sig(-math.log10(V1), 4)
     print("pH: " + str(ansA))
 
