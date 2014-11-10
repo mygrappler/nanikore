@@ -11,10 +11,14 @@ Vb = [10.01, 10.05, 10.10, 10.30, 10.50, 11.00, 12.00, 15.00, 20.00]
 
 
 for var in range(0, len(Va)):
+    if (Va[var] == 0):
+        print(0)
     vH = V0 - Va[var]
     vAll = Va[var] + V0
     V1 = round_sig(((vH*0.001)/vAll) * 100, 4)
     print(round_sig(-math.log10(V1), 4))
+    if(Va[var] == 8):
+        print(7)
 
 for var in range(0, len(Vb)):
     vH = Vb[var] - V0
