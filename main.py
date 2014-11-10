@@ -14,9 +14,9 @@ for var in range(0, len(Va)):
     if (var == 0):
         print("pH: 0")
 
-    vH = V0 - Va[var]
+    vH = (V0 - Va[var]) * 0.0001
     vAll = Va[var] + V0
-    V1 = round_sig(((vH*0.0001)/vAll) * 1000, 4)
+    V1 = round_sig((vH/vAll) * 1000, 4)
     ansA = round_sig(-math.log10(V1), 4)
     print("pH: " + str(ansA))
 
@@ -24,8 +24,8 @@ for var in range(0, len(Va)):
         print("pH: 7")
 
 for var in range(0, len(Vb)):
-    vH = Vb[var] - V0
+    vH = (Vb[var] - V0) * 0.0001
     vAll = Vb[var] + V0
-    V1 = round_sig(((vH*0.001)/vAll) * 100, 4)
+    V1 = round_sig((vH/vAll) * 1000, 4)
     ansB = round_sig(14 + math.log10(V1), 4)
     print("pH: " + str(ansB))
